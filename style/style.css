@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+body {
+    background-color: #f3ede7;
+}
+
+.spellLevel {
+    font-family: Staatliches;
+    font-size: 24px;
+    background-color: #8a2f2e;
+    width: 58px;
+    height: 32px;
+    border-radius: 5px;
+    padding: 5px;
+    align-content: center;
+    text-align: center;
+    color: #f3ede7;
+}
+
+#cantrips {
+    font-family: Staatliches;
+    font-size: 24px;
+    background-color: #8a2f2e;
+    width: 102px;
+    height: 32px;
+    border-radius: 5px;
+    padding: 5px;
+    align-content: center;
+    text-align: center;
+    color: #f3ede7;
+    margin-left: 8px;
+}
+
+
+.buttonSpell {
+    position: relative;
+    width: 100px;
+    height: 32px;
+    padding: 5px;
+    left: 8px;
+}
+
+.spellSlotTotal {
+    font-family: Staatliches;
+    font-size: 24px;
+    background-color: #5e1f28;
+    width: 50px;
+    height: 32px;
+    border-radius: 8px;
+    padding: 5px;
+    align-content: center;
+    text-align: center;
+    color: #f3ede7;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.spellSlot {
+    font-family: Staatliches;
+    font-size: 24px;
+    background-color: #8a2f2e;
+    width: 100px;
+    height: 32px;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: end;
+    color: #f3ede7;
+    border: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+}
+
+.addSpell {
+    font-family: Staatliches;
+    font-size: 24px;
+    background-color: #8a2f2e;
+    color: #f3ede7;
+    border-radius: 5px;
+    border: none;
+    margin-left: 40px;
+}
+
+.addSpell:hover {
+    background-color: #768a68;
+    cursor: pointer;
+}
+
+.addSpell:active {
+    background-color: #344628;
+    transform: translateY(4px);
+}
+
+.spellBox {
+    flex: 0 1 100px;
+    background-color: #c7c7c7;
+    width: 280px;
+    height: 360px;
+    border-radius: 8px;
+    padding: 10px;
+    padding-top: 0px;
+    position: relative;
+}
+
+.slotInfo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-top: 4px;
+}
+
+.spellSlotLabel {
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.spellSlotLabel p {   
+    font-family: Staatliches;
+    font-size: 12px;
+    gap: 8px;
+    margin-bottom: 0;
+}
+
+.spellSlotLabel label {
+    margin-right: 15px;
+}
+
+#spells {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 25px;
+}

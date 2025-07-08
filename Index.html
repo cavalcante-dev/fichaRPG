@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Ficha RPG</title>
+</head>
+<body>
+
+    <div id="spells">
+
+        <!--  Cantrips  -->
+
+        <div class="spellBox">
+            
+            <div class="spellSlotLabel">
+                <p>
+                    <label for="spellLevel"> NÍVEL DE MAGIA </label>
+                </p>
+            </div>
+
+            <div class="slotInfo">
+                <div class="spellLevel"> 0 </div>
+                <div id="cantrips"> TRUQUES </div>
+                <button class="addSpell"> + </button>
+            </div>
+
+        </div>
+
+        <!--  Spells above cantrips  -->
+
+        <div class="spellBox">
+        
+        <div class="spellSlotLabel">
+            <p>
+                <label for="spellLevel"> NÍVEL DE MAGIA </label>
+                <label for="spellLevel"> TOTAIS </label>
+                <label for="spellLevel"> USADOS </label>
+            </p>
+        </div>
+
+        <div class="slotInfo">
+            <div class="spellLevel"> 1 </div>
+            <div class="buttonSpell">
+                <div class="spellSlotTotal"> 6 </div>
+                <input class="spellSlot" type="number" min="0" max="6">
+            </div>
+            <button class="addSpell"> + </button>
+        </div>
+            
+        </div>
+
+    </div>
+
+</body>
+</html>

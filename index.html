@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/animation.css">
     <title>Ficha RPG</title>
 </head>
 <body>
@@ -23,11 +24,13 @@
             <div class="slotInfo">
                 <div class="spellLevel"> 0 </div>
                 <div id="cantrips"> TRUQUES </div>
-                <button class="addSpell"> + </button>
+                <button class="addSpell" onClick="addSpell()"> <img src="style/images/plus.svg" height="17px" alt=""> </button>
             </div>
 
             <div class="spellList">
-                
+                <ul class="spellListItem" id="spellListItem">
+                    <li> Magia <button class="verMais"> <img src="style/images/angle-right.svg" height="15px"> </button> <br> <hr> <img src="Wikipedia_Logo_1.0.png" width="10px"> 1 Ação <img src="Wikipedia_Logo_1.0.png" width="10px"> Pessoal <img src="Wikipedia_Logo_1.0.png" width="10px"> S, M </li> 
+                </ul>
             </div>
 
         </div>
@@ -48,14 +51,21 @@
             <div class="spellLevel"> 1 </div>
             <div class="buttonSpell">
                 <div class="spellSlotTotal"> 6 </div>
-                <input class="spellSlot" type="number" min="0" max="6">
+                <input class="spellSlot" type="number" min="0" max="6"> 
             </div>
             <button class="addSpell"> + </button>
         </div>
-            
+
+        <div class="spellList">
+            <ul class="spellListItem">
+                <li> Magia <button class="verMais"> <img src="style/images/angle-right.svg" height="15px"> </button> <br> <hr> <img src="Wikipedia_Logo_1.0.png" width="10px"> 1 Ação <img src="Wikipedia_Logo_1.0.png" width="10px"> Pessoal <img src="Wikipedia_Logo_1.0.png" width="10px"> S, M </li> 
+            </ul>
         </div>
 
     </div>
+
+
+    <script src="script/script.js"></script>
 
 </body>
 </html>

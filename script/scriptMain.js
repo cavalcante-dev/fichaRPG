@@ -32,7 +32,8 @@ closeButtons.forEach(button => {
 
 const spellName = {
     "maosMagicas": "Mão Mágicas",
-    "protecaoContraLaminas": "Proteção Contra Láminas" 
+    "protecaoContraLaminas": "Proteção Contra Láminas",
+    "raioDeFogo": "Raio de Fogo",
 };
 
 const addButtons = document.querySelectorAll('.addSpell');

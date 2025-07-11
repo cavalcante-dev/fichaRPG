@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
+    Developed by Leandro Cavalcante
+    Github: cavalcante-dev
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
@@ -48,6 +52,7 @@
 
         <!--  Spells above cantrips  -->
 
+        <!--
         <div class="spellBox">
         
         <div class="spellSlotLabel">
@@ -68,12 +73,13 @@
         </div>
 
         <div class="spellList">
-            <!--
+           
             <ul class="spellListItem">
                 <li> Magia <button class="verMais"> <img src="style/images/angle-right.svg" height="15px"> </button> <br> <hr> <img src="Wikipedia_Logo_1.0.png" width="10px"> 1 Ação <img src="Wikipedia_Logo_1.0.png" width="10px"> Pessoal <img src="Wikipedia_Logo_1.0.png" width="10px"> S, M </li> 
             </ul>
-            -->
+           
         </div>
+        -->
 
     </div>
 
@@ -97,7 +103,7 @@
             <button class="closeSpellModal" data-modal="modalCantrips"> <img src="style/images/x.svg" height="18px" alt=""> </button>
         </div>
 
-        <div class="spellDescription">
+        <div class="spellDescription" data-spell="maosMagicas">
 
             <div>
                 <h2 class="nameSpell">Mãos Mágicas</h2> <p>conjuração 0</p> <button type="button" class="addSpell" data-spell="maosMagicas"> <img src="style/images/plus.svg" height="17px" alt=""> </button>  
@@ -114,7 +120,8 @@
             <p>A mão não pode atacar, ativar itens mágicos ou carregar mais de 5 quilos.</p>
 
         </div>
-        <div class="spellDescription">
+
+        <div class="spellDescription" data-spell="protecaoContraLaminas">
 
             <div>
                 <h2 class="nameSpell">Proteção contra Lâminas</h2> <p>abjuração 0</p> <button type="button" class="addSpell" data-spell="protecaoContraLaminas"> <img src="style/images/plus.svg" height="17px" alt=""> </button>  
@@ -130,14 +137,31 @@
 
         </div>
 
+        <div class="spellDescription" data-spell="raioDeFogo">
+
+            <div>
+                <h2 class="nameSpell">Raio de Fogo</h2> <p>evocação 0</p> <button type="button" class="addSpell" data-spell="raioDeFogo"> <img src="style/images/plus.svg" height="17px" alt=""> </button>  
+            </div>
+
+            <hr>
+
+            <nav>
+                <p> <img src="style/images/cast.svg" alt="" height="17px" style="margin-left: 0;"> 1 Ação <img src="style/images/area.svg" alt="" height="17px"> 36 Metros <img src="style/images/components.svg" alt="" height="17px"> V, S <img src="style/images/duration.svg" alt="" height="17px"> Instantânea </p>
+            </nav>
+                     
+            <p>Você arremessa um cisco de fogo em uma criatura ou objeto dentro do alcance. Faça um ataque à distância com magia contra o alvo. Se atingir, o alvo sofre 1d10 de dano de fogo. Um objeto inflamável atingido por essa magia, incendeia se não estiver sendo vestido ou carregado.</p>
+            <p>O dano dessa magia aumenta em 1d10 quando você alcança o 5° nível (2d10), 11° nível (3d10) e 17° nível (4d10).</p>
+
+        </div>
         
     </dialog>
 
     <dialog id="spellWarning"> 
 
-        <button class="closeSpellModal" data-modal="spellWarning"> <img src="style/images/x.svg" height="18px" alt=""> </button>
         <div>
-            <p> Você já possui esse spell. </p>
+            <h2>Magia já Conhecida!</h2>
+            <p>Você já possui esta magia em sua lista de magias conhecidas.</p>
+            <button class="closeSpellModal" data-modal="spellWarning"> ENTENDIDO </button>
         </div>
 
     </dialog>

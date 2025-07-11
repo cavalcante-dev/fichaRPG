@@ -147,8 +147,8 @@ button:active {
 /* Button for close modal */
 
 .closeSpellModal {
-    margin-left: 75%;
     margin-top: 0px;
+    margin-left: auto;
 }
 
 /* Button for adding spell */
@@ -156,8 +156,7 @@ button:active {
 .addSpell {
     max-width: fit-content;
     max-height: fit-content;
-    position: fixed;
-    margin-left: 520px;
+    margin-left: auto;
 }
 
 .description {
@@ -233,7 +232,7 @@ dialog[open]{
 .spellModal {
     border: none;
     background-color: #f3ede7;
-    min-width: 600px;
+    min-width: 100px;
     max-width: 600px;
     min-height: 800px;
     border-radius: 8px;
@@ -272,10 +271,12 @@ dialog[open]{
     border-radius: 8px;
 }
 
-.spellDescription h2 {
+.nameSpell {
     font-family: Staatliches;
-    font-weight: 400;
-    width: 150px;
+    font-weight: 500;
+    max-width: 150px;
+    min-width: 150px;
+    white-space: pre-wrap;
 }
 
 .spellDescription hr {
@@ -287,13 +288,12 @@ dialog[open]{
 .spellDescription div {
     display: flex;
     align-items: center;
-    padding-bottom: 0px;
-    white-space: nowrap;
+    gap: 100px; 
 }
 
 .spellDescription div p {
     position: fixed;
-    width: 500px;
+    min-width: 73%;
     text-align: end;
 }
 
@@ -313,11 +313,12 @@ dialog[open]{
     border-radius: 8px;
     border: none;
     max-width: 500px;
-    min-width: 500px;
+    min-width: 30%;
 }
 
 .spellDescriptionModal .spellDescription {
     margin-top: 0px;
+    min-height: 100%;
 }
 
 .spellDescriptionModal .closeSpellModal {
@@ -325,11 +326,11 @@ dialog[open]{
     margin-left: 0px;
     padding: 5px;
     font-family: Staatliches;
-    margin-top: 10px;
 }
 
 .spellDescriptionModal div div p {
-    width: 450px;
+    max-width: 450px;
+    min-width: 80%;
 }
 
 /* Warning for already known spell */

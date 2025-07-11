@@ -14,6 +14,7 @@ openButtons.forEach(button => {
 });
 
 // function for closing all the modals
+
 const closeButtons = document.querySelectorAll('.closeSpellModal');
 
 closeButtons.forEach(button => {
@@ -48,31 +49,76 @@ addButtons.forEach(button => {
 
 function renderSpellList(spellId) {
 
-    if (spellName[spellId]) {
+    if(verifySpellOnList(spellId)) {
 
-        const divNewSpell = document.createElement("div");
-        divNewSpell.className = "knownSpell";
-        const newSpell = document.createElement("li");
-        const hr = document.createElement("hr");
-        hr.className = "separator";
-        
-        let descriptionButton = document.createElement("button");
-        descriptionButton.className = "description";
-        descriptionButton.textContent=">";
-        descriptionButton.onclick = () => seeDescription(spellId[spellId]);
+        if (spellName[spellId]) {
 
-        let removeButton = document.createElement("button");
-        removeButton.className = "remove";
-        removeButton.textContent="X";
-        removeButton.onclick = () => removeSpell(spellName[spellId]);
+            const divNewSpell = document.createElement("div");
+            divNewSpell.className = "knownSpell";
+            divNewSpell.setAttribute("data-spell", spellId);
+            const divButtons = document.createElement("div");
+            divButtons.className = "buttonDiv";
+            const newSpell = document.createElement("li");
+            
+            let descriptionButton = document.createElement("button");
+            descriptionButton.className = "description";
+            descriptionButton.innerHTML = "<img src=\"/style/images/angle-right.svg\" height=\"23px\">"
+            descriptionButton.onclick = () => seeDescription();
 
-        newSpell.textContent = spellName[spellId];
-        
-        cantripsList.appendChild(divNewSpell);
-        cantripsList.appendChild(newSpell);
-        cantripsList.appendChild(descriptionButton);
-        cantripsList.appendChild(removeButton);
+            let removeButton = document.createElement("button");
+            removeButton.className = "remove";
+            removeButton.setAttribute("data-spell", spellId);
+            removeButton.innerHTML = "<img src=\"style/images/x.svg\" height=\"23px\">"
+            removeButton.onclick = () => removeSpell(removeButton.getAttribute('data-spell'));
+
+            newSpell.textContent = spellName[spellId];
+            
+            cantripsList.appendChild(divNewSpell);
+            divNewSpell.appendChild(newSpell);
+            divNewSpell.appendChild(divButtons);
+            divButtons.appendChild(descriptionButton);
+            divButtons.appendChild(removeButton);
+
+        }
+
+    } else {
+
+        const modal = document.getElementById("spellWarning")
+        modal.showModal();
 
     }
+
+}
+
+function verifySpellOnList(spellId) {
+
+    const spellsOnList = document.querySelectorAll(".knownSpell");
+    
+    if (!spellsOnList.length) {
+        return true;
+    }
+
+    for (const spellOnList of spellsOnList) {
+        const spellData = spellOnList.getAttribute('data-spell');
+        if (spellId === spellData) {
+            return false;
+        }
+    }
+
+    return true;
+
+}
+
+
+function removeSpell(dataSpellButton) {
+
+    const spellOnList = document.querySelectorAll(".knownSpell");
+    
+    spellOnList.forEach(spell => {
+        const spellData = spell.getAttribute('data-spell');
+        if (dataSpellButton == spellData) {
+            spell.remove();
+        }
+    })
 
 }

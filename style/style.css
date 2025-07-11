@@ -160,17 +160,28 @@ button:active {
 }
 
 .description {
+    position: fixed;
     font-size: 20px;
     max-width: 30px;
     max-height: 26px;
-    margin: 10px;
-    margin-left: 35%;
+    min-width: 30px;
+    min-height: 26px;
 }
 
 .remove {
+    position: fixed;
     font-size: 20px;
-    max-width: 30px;
+    max-width: 35px;
     max-height: 26px;
+    min-width: 35px;
+    min-height: 26px;
+    margin-left: 40px;
+}
+
+.buttonDiv {
+    display: flex;
+    align-items: center;
+    margin-left: 23%;
 }
 
 /* Lists */
@@ -191,7 +202,16 @@ button:active {
 
 .spellListItem li {
     padding: 10px;
+    max-width: 100px;
+    min-width: 100px;
+}
+
+.knownSpell {
     display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #878585;
 }
 
 /* Spell Modal */

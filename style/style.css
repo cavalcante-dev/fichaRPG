@@ -156,7 +156,8 @@ button:active {
 .addSpell {
     max-width: fit-content;
     max-height: fit-content;
-    margin-left: 2%;
+    position: fixed;
+    margin-left: 520px;
 }
 
 .description {
@@ -291,8 +292,9 @@ dialog[open]{
 }
 
 .spellDescription div p {
-    margin-left: 50%;
+    position: fixed;
     width: 500px;
+    text-align: end;
 }
 
 .spellDescription nav p {
@@ -307,6 +309,41 @@ dialog[open]{
     margin-left: 10px;
 }
 
+/* Warning for already known spell */
+
+#spellWarning {
+    border: none;
+    border-radius: 8px;
+    max-width: 350px;
+    max-height: 200px;
+    align-items: center;
+    padding: 20px;
+}
+
+#spellWarning button {
+    margin-left: 0px;
+    margin: 10px;
+    font-family: Staatliches;
+}
+
+#spellWarning div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#spellWarning h2 {
+    margin: 8px;
+    color: #5e1f28;
+    font-weight: 550;
+    font-size: 40px;
+}
+
+#spellWarning p {
+    font-size: 20px;
+    margin: 8px;
+}
 
 
 

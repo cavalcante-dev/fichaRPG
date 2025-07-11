@@ -62,7 +62,7 @@ function renderSpellList(spellId) {
             
             let descriptionButton = document.createElement("button");
             descriptionButton.className = "description";
-            descriptionButton.innerHTML = "<img src=\"/style/images/angle-right.svg\" height=\"23px\">"
+            descriptionButton.innerHTML = "<img src=\"style/images/angle-right.svg\" height=\"23px\">"
             descriptionButton.onclick = () => seeDescription();
 
             let removeButton = document.createElement("button");

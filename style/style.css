@@ -309,6 +309,29 @@ dialog[open]{
     margin-left: 10px;
 }
 
+.spellDescriptionModal {
+    border-radius: 8px;
+    border: none;
+    max-width: 500px;
+    min-width: 500px;
+}
+
+.spellDescriptionModal .spellDescription {
+    margin-top: 0px;
+}
+
+.spellDescriptionModal .closeSpellModal {
+    width: 100%;
+    margin-left: 0px;
+    padding: 5px;
+    font-family: Staatliches;
+    margin-top: 10px;
+}
+
+.spellDescriptionModal div div p {
+    width: 450px;
+}
+
 /* Warning for already known spell */
 
 #spellWarning {

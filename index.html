@@ -4,33 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/animation.css">
     <title>Ficha RPG</title>
 </head>
 <body>
 
     <div id="spells">
-
+    
         <!--  Cantrips  -->
 
         <div class="spellBox">
             
+            <!-- Laber for spell level -->
             <div class="spellSlotLabel">
                 <p>
                     <label for="spellLevel"> NÍVEL DE MAGIA </label>
                 </p>
             </div>
 
+            <!-- Laber for slots info -->
             <div class="slotInfo">
                 <div class="spellLevel"> 0 </div>
                 <div id="cantrips"> TRUQUES </div>
-                <button class="addSpell" onClick="addSpell()"> <img src="style/images/plus.svg" height="17px" alt=""> </button>
+                <button type="button" class="openSpellModal" data-modal="modalCantrips"> <img src="style/images/plus.svg" height="17px" alt=""> </button>
             </div>
 
+            <!-- List of known spells  -->
             <div class="spellList">
-                <ul class="spellListItem" id="spellListItem">
-                    <li> Magia <button class="verMais"> <img src="style/images/angle-right.svg" height="15px"> </button> <br> <hr> <img src="Wikipedia_Logo_1.0.png" width="10px"> 1 Ação <img src="Wikipedia_Logo_1.0.png" width="10px"> Pessoal <img src="Wikipedia_Logo_1.0.png" width="10px"> S, M </li> 
+                    
+                <ul class="spellListItem" id="cantripsList">
+                    
                 </ul>
+                <!-- Model for spell in the list. 
+
+                <ul class="spellListItem" id="spellListItem">
+                    <li> Magia <button type="button" class="verMais"> <img src="style/images/angle-right.svg" height="15px"> </button> <br> <hr> <img src="Wikipedia_Logo_1.0.png" width="10px"> 1 Ação <img src="Wikipedia_Logo_1.0.png" width="10px"> Pessoal <img src="Wikipedia_Logo_1.0.png" width="10px"> S, M </li> 
+                </ul>
+
+                -->
+
             </div>
 
         </div>
@@ -53,19 +64,85 @@
                 <div class="spellSlotTotal"> 6 </div>
                 <input class="spellSlot" type="number" min="0" max="6"> 
             </div>
-            <button class="addSpell"> + </button>
+            <button class="openSpellModal"> + </button>
         </div>
 
         <div class="spellList">
+            <!--
             <ul class="spellListItem">
                 <li> Magia <button class="verMais"> <img src="style/images/angle-right.svg" height="15px"> </button> <br> <hr> <img src="Wikipedia_Logo_1.0.png" width="10px"> 1 Ação <img src="Wikipedia_Logo_1.0.png" width="10px"> Pessoal <img src="Wikipedia_Logo_1.0.png" width="10px"> S, M </li> 
             </ul>
+            -->
         </div>
 
     </div>
 
+    <img src="style/images/angle-right.svg" alt="">
 
-    <script src="script/script.js"></script>
+    <!-- Modal for adding the spells to the list. -->
+    <dialog id="modalCantrips" class="spellModal">
+
+        <div class="utilityBar"> 
+            <select id="fromSpellClass">
+                <option value=" ">-----</option>
+                <option value="bard">Bardo</option>
+                <option value="warlock">Bruxo</option>
+                <option value="cleric">Clérigo</option>
+                <option value="druid">Druida</option>
+                <option value="sorcerer">Feiticeiro</option>
+                <option value="mage">Mago</option>
+                <option value="paladin">Paladino</option>
+                <option value="ranger">Patrulheiro</option>
+            </select>
+            <button class="closeSpellModal" data-modal="modalCantrips"> <img src="style/images/x.svg" height="18px" alt=""> </button>
+        </div>
+
+        <div class="spellDescription">
+
+            <div>
+                <h2 class="nameSpell">Mãos Mágicas</h2> <p>conjuração 0</p> <button type="button" class="addSpell" data-spell="maosMagicas"> <img src="style/images/plus.svg" height="17px" alt=""> </button>  
+            </div>
+
+            <hr>
+
+            <nav>
+                <p> <img src="style/images/cast.svg" alt="" height="17px" style="margin-left: 0;"> 1 Ação <img src="style/images/area.svg" alt="" height="17px"> 9 Metros <img src="style/images/components.svg" alt="" height="17px"> V, S <img src="style/images/duration.svg" alt="" height="17px"> 1 Minuto</p>
+            </nav>
+                     
+            <p>Uma mão espectral flutuante aparece num ponto, à sua escolha, dentro do alcance. A mão permanece pela duração ou até você dissipa-la com uma ação. A mão some se estiver a mais de 9 metros de você ou se você conjurar essa magia novamente. </p>
+            <p>Você pode usar sua ação para controlar a mão. Você pode usar a mão para manipular um objeto, abrir uma porta ou recipiente destrancado, guardar ou pegar um item de um recipiente aberto ou derramar o conteúdo de um frasco. Você pode mover a mão até 9 metros a cada vez que a usa.</p>
+            <p>A mão não pode atacar, ativar itens mágicos ou carregar mais de 5 quilos.</p>
+
+        </div>
+        <div class="spellDescription">
+
+            <div>
+                <h2 class="nameSpell">Proteção contra Lâminas</h2> <p>abjuração 0</p> <button type="button" class="addSpell" data-spell="protecaoContraLaminas"> <img src="style/images/plus.svg" height="17px" alt=""> </button>  
+            </div>
+
+            <hr>
+
+            <nav>
+                <p> <img src="style/images/cast.svg" alt="" height="17px" style="margin-left: 0;"> 1 Ação <img src="style/images/area.svg" alt="" height="17px"> Pessoal <img src="style/images/components.svg" alt="" height="17px"> V, S <img src="style/images/duration.svg" alt="" height="17px"> 1 Rodada</p>
+            </nav>
+                     
+            <p>Você estende suas mãos e desenha um símbolo de proteção no ar. Até o final do seu próximo turno, você terá resistência contra dano de concussão, cortante e perfurante causado por ataques com armas.</p>
+
+        </div>
+
+        
+    </dialog>
+
+    <dialog id="spellWarning"> 
+
+        <button class="closeSpellModal" data-modal="spellWarning"> <img src="style/images/x.svg" height="18px" alt=""> </button>
+        <div>
+            <p> Você já possui esse spell. </p>
+        </div>
+
+    </dialog>
+
+    <script src="script/scriptMain.js"></script>
 
 </body>
 </html>

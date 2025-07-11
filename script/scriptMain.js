@@ -63,8 +63,9 @@ function renderSpellList(spellId) {
             
             let descriptionButton = document.createElement("button");
             descriptionButton.className = "description";
+            descriptionButton.setAttribute("data-spell", spellId);
             descriptionButton.innerHTML = "<img src=\"style/images/angle-right.svg\" height=\"23px\">"
-            descriptionButton.onclick = () => seeDescription();
+            descriptionButton.onclick = () => seeDescription(descriptionButton.getAttribute('data-spell'));
 
             let removeButton = document.createElement("button");
             removeButton.className = "remove";
@@ -110,6 +111,12 @@ function verifySpellOnList(spellId) {
 
 }
 
+function seeDescription(dataSpellButton) {
+
+    const descriptionModal = document.getElementById(dataSpellButton);
+    descriptionModal.showModal();
+    
+}
 
 function removeSpell(dataSpellButton) {
 

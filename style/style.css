@@ -234,9 +234,10 @@ dialog[open]{
     background-color: #f3ede7;
     min-width: 100px;
     max-width: 600px;
-    min-height: 800px;
+    max-height: 100%;
     border-radius: 8px;
     padding: 20px;
+    margin-top: 0px;
 }
 
 .utilityBar {
@@ -288,13 +289,11 @@ dialog[open]{
 .spellDescription div {
     display: flex;
     align-items: center;
-    gap: 100px; 
 }
 
 .spellDescription div p {
-    position: fixed;
-    min-width: 73%;
     text-align: end;
+    width: 100px;
 }
 
 .spellDescription nav p {
@@ -328,10 +327,6 @@ dialog[open]{
     font-family: Staatliches;
 }
 
-.spellDescriptionModal div div p {
-    max-width: 450px;
-    min-width: 80%;
-}
 
 /* Warning for already known spell */
 

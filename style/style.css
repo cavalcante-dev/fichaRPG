@@ -232,12 +232,10 @@ dialog[open]{
 .spellModal {
     border: none;
     background-color: #f3ede7;
-    min-width: 100px;
-    max-width: 600px;
-    max-height: 100%;
+    max-width: 650px;
+    max-height: 90%;
     border-radius: 8px;
     padding: 20px;
-    margin-top: 0px;
 }
 
 .utilityBar {
@@ -247,6 +245,10 @@ dialog[open]{
     display: flex;
     align-items: center;
     margin-top: 0px;
+    position: sticky;
+    z-index: 1000;
+    top: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 #fromSpellClass {
@@ -255,6 +257,7 @@ dialog[open]{
     background-color: #f3ede7;
     border-radius: 5px;
     border-color: #878585;
+    width: 30%;
 }
 
 #fromSpellClass option {
@@ -262,11 +265,22 @@ dialog[open]{
     font-size: 15px;
 }
 
+#searchBar {
+    font-family: Staatliches;
+    width: 30%;
+    font-size: 20px;
+    background-color: #f3ede7;
+    border-radius: 5px;
+    border: 1px solid #878585;
+    padding-left: 10px;
+    margin-left: 5%;
+}
+
 /* list of spells */
 
 .spellDescription {
     font-family: Inconsolata;
-    border: 2px solid #c7c7c7;
+    border: 2px solid #878585;
     padding: 20px;
     margin-top: 10px;
     border-radius: 8px;
@@ -293,7 +307,9 @@ dialog[open]{
 
 .spellDescription div p {
     text-align: end;
-    width: 100px;
+    width: 150px;
+    margin-right: 10px;
+    white-space: nowrap;
 }
 
 .spellDescription nav p {
@@ -327,6 +343,32 @@ dialog[open]{
     font-family: Staatliches;
 }
 
+@media (max-width: 768px) {
+    .spellModal {
+        border: none;
+        background-color: #f3ede7;
+        min-width: 90%;
+        max-height: 95%;
+        padding: 20px;
+        border-radius: 0px;
+    }
+}
+
+/* Warning for no spells found */
+
+#noResultsMessageCantrip {
+    border: 2px solid #c7c7c7;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    display: none;
+}
+
+#noResultsMessageCantrip p {
+    text-align: center;
+    color: #909090;
+    font-size: 20px;
+}
 
 /* Warning for already known spell */
 
@@ -334,9 +376,9 @@ dialog[open]{
     border: none;
     border-radius: 8px;
     max-width: 350px;
-    max-height: 200px;
+    max-height: 210px;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 #spellWarning button {
@@ -350,6 +392,9 @@ dialog[open]{
     align-items: center;
     flex-direction: column;
     text-align: center;
+    border: 1px solid #878585;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 #spellWarning h2 {
@@ -363,8 +408,3 @@ dialog[open]{
     font-size: 20px;
     margin: 8px;
 }
-
-
-
-
-

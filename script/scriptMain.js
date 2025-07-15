@@ -31,9 +31,23 @@ closeButtons.forEach(button => {
 // function for adding a spell into the known spell list
 
 const spellName = {
-    "maosMagicas": "Mão Mágicas",
-    "protecaoContraLaminas": "Proteção Contra Láminas",
-    "raioDeFogo": "Raio de Fogo",
+    "amigos": "Amigos",
+    "chamaSagrada": "Chama Sagrada",
+    "golpeVerdadeiro": "Golpe Verdadeiro",
+    "ilusaoMenor": "Ilusão Menor",
+    "jatoDeVeneno": "Jato de Veneno",
+    "luz": "Luz",
+    "luzesDancantes": "Luzes Dançantes",
+    "maoMagica": "Mão Mágica",
+    "mensagem": "Mensagem",
+    "prestidigitacao": "Prestidigitação",
+    "protecaoComLamina": "Proteção com Lâmina",
+    "rajadaDeFogo": "Rajada de Fogo",
+    "raioDeGelo": "Raio de Gelo",
+    "reparo": "Reparo",
+    "salpicosDeAcido": "Salpicos de Ácido",
+    "toqueChocante": "Toque Chocante",
+    "toqueGelido": "Toque Gélido"
 };
 
 const addButtons = document.querySelectorAll('.addSpell');
@@ -130,3 +144,29 @@ function removeSpell(dataSpellButton) {
     })
 
 }
+
+const searchInput = document.getElementById('searchBar');
+const cantrips = document.querySelectorAll('.spellDescription');
+const noResultsMessage = document.getElementById('noResultsMessageCantrip');
+
+searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    let countForFound = 0;
+    cantrips.forEach(cantrip => {
+        
+        const nameElement = cantrip.querySelector('.nameSpell');
+        const cantripName = nameElement ? nameElement.textContent.toLowerCase() : '';
+        const isMatch = cantripName.includes(searchTerm);
+        cantrip.style.display = searchTerm === '' || isMatch ? '' : 'none';
+        if (isMatch) {
+            countForFound++;
+        };
+
+    })
+    if (countForFound === 0) {
+        noResultsMessage.style.display = 'block';
+    }
+    if (searchTerm === '') {
+        noResultsMessage.style.display = 'none';
+    }
+})

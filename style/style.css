@@ -234,6 +234,7 @@ dialog[open]{
     background-color: #f3ede7;
     max-width: 650px;
     max-height: 90%;
+    min-height: 90%;
     border-radius: 8px;
     padding: 20px;
 }
@@ -348,7 +349,7 @@ dialog[open]{
         border: none;
         background-color: #f3ede7;
         min-width: 90%;
-        max-height: 95%;
+        min-height: 95%;
         padding: 20px;
         border-radius: 0px;
     }

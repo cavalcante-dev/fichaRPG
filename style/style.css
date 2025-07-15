@@ -233,6 +233,7 @@ dialog[open]{
     border: none;
     background-color: #f3ede7;
     max-width: 650px;
+    min-width: 650px;
     max-height: 90%;
     min-height: 90%;
     border-radius: 8px;
